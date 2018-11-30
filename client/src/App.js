@@ -8,6 +8,7 @@ import blue from 'material-ui/colors/blue';
 import io from 'socket.io-client';
 import Snackbar from './components/Snackbar';
 import FileDropZone from './components/FileDropZone';
+import ShowQrCodeButton from './components/ShowQrCodeButton';
 
 const theme = createMuiTheme({
   palette: {
@@ -55,6 +56,7 @@ class App extends Component {
           <TopBar/>
           <FileList files={this.state.files} fetchingFiles={this.state.fetchingFiles} setDownloadFileId={this.setDownloadFileId.bind(this)}/>
           <UploadFileButton/>
+          <ShowQrCodeButton/>
           <Snackbar message="File Deleted" identity="deleted"/>
           <FileDownloadForm fileId={this.state.downloadFileId}/>
         </MuiThemeProvider>
